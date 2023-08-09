@@ -25,7 +25,7 @@ def write_to_csv(filename, data):
             writer.writerow(data)
 
 def main():
-    cmd = ["nvidia-smi", "--query-gpu=timestamp,pci.bus_id,utilization.gpu,utilization.memory,temperature.gpu,temperature.memory,power.draw", "--format=csv", "-l", "1"]
+    cmd = ["nvidia-smi", "--query-gpu=timestamp,pci.bus_id,utilization.gpu,utilization.memory,memory.used,temperature.gpu,temperature.memory,power.draw,ecc.errors.corrected.volatile.total,ecc.errors.corrected.aggregate.total", "--format=csv", "-l", "1"]
     process = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
     current_file = None

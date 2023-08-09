@@ -13,7 +13,7 @@ def main():
 
     stats = pd.read_csv(args.statfile, parse_dates=True, skipinitialspace=True, index_col=0)
     for col_name in ('utilization.gpu [%]', 'utilization.memory [%]', 'memory.used [MiB]','temperature.gpu','power.draw [W]'):
-        stats[col_name] = stats[col_name].str.rstrip(' %MiBW').replace("[GPU is lost]", "0").astype(float) #/ 100
+        stats[col_name] = stats[col_name].astype(str).str.rstrip(' %MiBW').replace("[GPU is lost]", "0").astype(float) #/ 100
 
     bus_ids = {bus_id:i for i,bus_id in enumerate(sorted(stats['pci.bus_id'].unique()))}
 

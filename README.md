@@ -3,7 +3,7 @@ This repo contains small code examples of how to use `nvidia-smi` and `pynvml` t
 both offline logging to CSV and online plotting.
 
 ## Logging to CSV
-To log utilization, run the script `log_gpu_utilization.sh` Exit logging by pressing `CTRL+C`.
+To log utilization, run the python script `gpulog.py` Exit logging by pressing `CTRL+C`.
 
 To display logged GPU utilization, run the script `plot_nvidia_dump.py`:
 ```

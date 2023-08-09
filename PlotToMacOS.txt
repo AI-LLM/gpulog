@@ -1,0 +1,6 @@
+On LinuxServer:
+sudo apt install tcl-dev tk-dev python3-tk
+pip --no-cache-dir install -U --force-reinstall matplotlib
+From MacOS: 
+Install XQuartz
+ssh -X luwei@LinuxServer
